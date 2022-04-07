@@ -63,8 +63,8 @@ export default {
         rowLots.findIndex((x) => x.Lot_Id === null) > -1 ? true : false;
       rowLots.forEach((item, i) => {
         Width_From = i > 0 ? rowLots[i - 1].Width_To : 0;
-        Width_To =
-          Math.round((100 * item.Row_length) / totalRowLength) + Width_From;
+        Width_To = parseFloat(((100 * item.Row_length) / totalRowLength + Width_From).toFixed(2));
+        console.log(Width_To);
         item.Width_From = isNewLot ? Width_From : item.Width_From_Pre;
         item.Width_To = isNewLot ? Width_To : item.Width_To_Pre;
       });
