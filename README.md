@@ -3,6 +3,9 @@
 ## Project setup
 ```
 npm install
+
+also install eslint
+npm install eslint --save-dev
 ```
 
 ### Compiles and hot-reloads for development
